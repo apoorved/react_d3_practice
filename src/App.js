@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Chart from './Chart';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = {
+    data:[12,5,6,6,9,10],
+    width:700,
+    height:500,
+  }
+  render() {
+    return (
+      <div className='App'>
+        <Chart data={this.state.data} width={this.state.width} height={this.state.height}/>
+        
+      </div>
+    );
+  }
 }
 
-export default App;
+
